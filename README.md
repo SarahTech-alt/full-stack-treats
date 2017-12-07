@@ -21,8 +21,7 @@ Base Mode:
 
 1. Fork and clone repo.
 2. `npm install` to get all dependencies.
-3. `npm start` to start server.
-4. `npm test` to run tests.
+3. Setup database as  described below
 
 ### Database
 
@@ -48,12 +47,28 @@ VALUES ('Cupcake', 'A delicious cupcake', '/assets/cupcake.jpg'),
 ('Donuts', 'Mmmm donuts', '/assets/donuts.jpg');
 ```
 
+Test your project: `npm start` to start server. Open http://localhost:3000/ in your browser and you should see something like the following:
+
+![start](images/start.png)
+
 ## TODO
 
 ### Baseline
 Before we can launch, we at least need to be able to add new treats.
 
 - [ ] `POST /treats` expects a treat name, description and link to a url image
+
+Once working you should be able to enter new treat info as such:
+
+![adding](images/adding.png)
+
+After adding the treat the page should update:
+
+![added](images/added.png)
+
+And the new info should be in your table:
+
+![dbUpdated](images/dbUpdated.png)
 
 Hard Mode:
 ===
