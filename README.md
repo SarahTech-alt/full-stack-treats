@@ -72,7 +72,6 @@ And the new info should be in your table:
 
 Hard Mode:
 ===
-### Special Sauce
 Our client will be ecstatic if we can also deliver the ability to update and
 delete, but consider these "nice-to-haves".
 
@@ -81,7 +80,6 @@ delete, but consider these "nice-to-haves".
 
 Pro Mode:
 ===
-### Eye of the Tiger
 **If you're feeling fancy and have some time to spare**, try this one. You might need to research query strings and express. 
 
 - [ ] `GET /treats?q=donut` should return only treats that match the query parameter
