@@ -22,15 +22,10 @@ Base Mode:
 1. Fork and clone repo.
 2. `npm install` to get all dependencies.
 3. `npm start` to start server.
-4. `npm test` to run tests.
 
 ### Database
 
-**On npm install, a script will run that creates the database for you.**
-
-If it's NOT created, use the info below.
-
-Table created in "treatsDB" database:
+Create a database names "treatsDB" wih a table as described below:
 
 ```SQL
 CREATE TABLE treats (
@@ -40,7 +35,8 @@ CREATE TABLE treats (
 	pic varchar(255)
 );
 ```
-Treats table starter data:
+
+Some starter data:
 
 ```SQL
 INSERT INTO treats (name, description, pic)
@@ -50,14 +46,16 @@ VALUES ('Cupcake', 'A delicious cupcake', '/assets/cupcake.jpg'),
 
 ## TODO
 
-### Baseline
-Before we can launch, we at least need to be able to add new treats.
+Baseline
+==
 
-- [ ] `POST /treats` expects a treat name, description and link to a url image
+We need to be able to add new treats.
+
+- [ ] `POST /treats` expects a treat name, description and link to a url image.
 
 Hard Mode:
 ===
-### Special Sauce
+
 Our client will be ecstatic if we can also deliver the ability to update and
 delete, but consider these "nice-to-haves".
 
@@ -66,8 +64,8 @@ delete, but consider these "nice-to-haves".
 
 Pro Mode:
 ===
-### Eye of the Tiger
-**If you're feeling fancy and have some time to spare**, try this one. You might need to research query strings and express. 
+
+You might need to research query strings and express. 
 
 - [ ] `GET /treats?q=donut` should return only treats that match the query parameter
 

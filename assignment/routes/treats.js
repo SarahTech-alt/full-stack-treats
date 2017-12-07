@@ -6,8 +6,8 @@ let pool = new pg.Pool(config); // DO NOT MODIFY
 
 // GET /treats
 // Only modify IF you are doing Eye of the Tiger
-router.get('/', function (req, res) {
-  pool.connect(function (err, client, done) {
+router.get('/', (req, res) => {
+  pool.connect( (err, client, done) => {
     if (err) {
       console.log('Error connecting to the DB', err);
       res.sendStatus(500);
@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
       return;
     }
 
-    client.query('SELECT * FROM treats;', function (err, result) {
+    client.query('SELECT * FROM treats;', (err, result) =>{
       done();
       if (err) {
         console.log('Error querying the DB', err);
