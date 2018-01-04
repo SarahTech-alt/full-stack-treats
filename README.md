@@ -24,23 +24,28 @@ You should not need to change the client code at all. In fact, it is minimized t
 
 Create a new database named: `sql_code_challenge`
 
+### Create Treats Table
+
 ```SQL
+-- create table
 CREATE TABLE treats (
 	id SERIAL PRIMARY KEY,
 	name varchar(255),
 	description text,
 	pic varchar(255)
 );
-```
-Treats table starter data:
 
-```SQL
+-- Add some data
 INSERT INTO treats (name, description, pic)
-VALUES ('Cupcake', 'A delicious cupcake', '/assets/cupcake.jpg'),
+VALUES 
+('Cupcake', 'A delicious cupcake', '/assets/cupcake.jpg'),
 ('Donuts', 'Mmmm donuts', '/assets/donuts.jpg');
+
 ```
 
-Test your project: `npm start` to start server. Open http://localhost:3000/ in your browser and you should see something like the following:
+### Test your project
+
+Run `npm start` to start the server. Open http://localhost:3000/ in your browser and you should see something like the following:
 
 ![start](images/start.png)
 
