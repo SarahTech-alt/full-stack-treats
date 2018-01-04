@@ -1,4 +1,4 @@
-const router = require('express').Router(); // DO NOT MODIFY
+const router = require('express').Router();
 const pool = require('../modules/pool');
 
 
