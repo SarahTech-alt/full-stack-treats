@@ -8,21 +8,16 @@ const config = {
   idleTimeoutMillis: 30000 // 30 seconds to try to connect
 };
 
-// create a new pool instance to manage our connections
+// one instance to rul them all!
 const pool = new Pool(config);
 
-// .on here looks familiar...this is how node can handle arbitrary events
-// this is NOT required but it is very useful for debugging
 pool.on('connect', (client) => {
   console.log('pg connected');
 })
 
-// the pool with emit an error on behalf of any idle clients
-// it contains if a backend error or network partition happens
 pool.on('error', (err, client) => {
   console.log('Unexpected error on idle pg client', err);
   process.exit(-1);
 });
 
-// need to allow access to this pool instance to other code
 module.exports = pool;
