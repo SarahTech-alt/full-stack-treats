@@ -1,35 +1,24 @@
-Code Challenge 3: Treats!
+Code Challenge 3: Treats Server-side Code
 ===
 
-Your front-end developer has created all of the client-side code necessary to view, add, update, and delete treats from the treats database. In fact, said developer even stubbed out most of your server-side code as well!
+Your front-end developer has created all of the client-side code necessary to view, add, update, and delete treats from the treats database. 
 
-A server-side developer has started creating the routes needed to make this application work.
-
-* `GET /treats` returns a list of potential treats (e.g. cupcakes, etc) and their image URLs
-
-Tech: PostgreSQL
----
-
-Base Mode:
-===
+A server-side developer has set-up the server to serve back our static files as well as some initial pg and routing code. But none of the routes are implemented.
 
 ## Setup
 
 ### Server
 
-**IMPORTANT:** Make sure to start postgres.
+**IMPORTANT:** Make sure to start postgres!
 
 1. Fork and clone repo.
 2. `npm install` to get all dependencies.
-3. Setup database as  described below
+3. Setup database as described below.
+4. You will need to adjust the pool connection configuration.
 
 ### Database
 
-**On npm install, a script will run that creates the database for you.**
-
-If it's NOT created, use the info below.
-
-Table created in "treatsDB" database:
+Create a new database named: `sql_code_challenge`
 
 ```SQL
 CREATE TABLE treats (
@@ -51,12 +40,19 @@ Test your project: `npm start` to start server. Open http://localhost:3000/ in y
 
 ![start](images/start.png)
 
+It seems to be missing the data you just created.
+
 ## TODO
 
-### Baseline
-Before we can launch, we at least need to be able to add new treats.
+### Base Mode
 
-- [ ] `POST /treats` expects a treat name, description and link to a url image
+Create the routes and SQL queries necessary to respond to the requests from the client side to return all treats, add new treats, and to delete treats. 
+
+You will need:
+
+- [ ] `GET /treats` should return all treats from the database.
+
+- [ ] `POST /treats` expects a treat name, description and link to a url image.
 
 Once working you should be able to enter new treat info as such:
 
@@ -70,16 +66,14 @@ And the new info should be in your table:
 
 ![dbUpdated](images/dbUpdated.png)
 
-Hard Mode:
-===
-Our client will be ecstatic if we can also deliver the ability to update and
-delete, but consider these "nice-to-haves".
 
-- [ ] `PUT /treats/:id` updates the treat description
-- [ ] `DELETE /treats/:id` deletes a treat
+- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle in the interface will display the delete button for each treat.
 
-Pro Mode:
-===
+- [ ] `PUT /treats/<id>` updates the treat description.
+
+
+### Pro Mode
+
 **If you're feeling fancy and have some time to spare**, try this one. You might need to research query strings and express. 
 
 - [ ] `GET /treats?q=donut` should return only treats that match the query parameter
