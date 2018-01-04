@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = 3000;
 
-const treats = require('./routes/treats');
+const treats = require('./routes/treats.router');
 
 app.use(express.static('./server/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
