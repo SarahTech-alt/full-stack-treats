@@ -1,15 +1,15 @@
 Code Challenge 3: Treats Server-side Code
 ===
 
-Your front-end developer has created all of the client-side code necessary to view, add, update, and delete treats from the treats database. 
+Your front-end developer has created all of the client-side code necessary to view, add, update, and delete treats from the database. 
 
-A server-side developer has set-up the server to serve back our static files as well as some initial pg and routing code. But none of the routes are implemented. All clicks on the interface buttons fail.
+Your back-end developer has set-up the server to serve back the static files as well as some initial pg and routing code. But none of the routes are implemented. All button clicks on the DOM fail.
 
 ## Setup
 
 ### Client
 
-You should not need to change the client code at all. In fact, it is minimized to discourage you from doing so.
+You should not need to change the client code at all. In fact, it is minified to discourage you from doing so.
 
 ### Server
 
@@ -49,7 +49,7 @@ Run `npm start` to start the server. Open http://localhost:3000/ in your browser
 
 ![start](images/start.png)
 
-It seems to be missing the data you just created.
+It seems to be missing the data you just added to your database.
 
 ## TODO
 
@@ -57,7 +57,7 @@ It seems to be missing the data you just created.
 
 ### Base Mode
 
-Create the routes and SQL queries necessary to respond to the requests from the client side to return all treats, add new treats, and to delete treats. 
+Create the routes and SQL queries necessary to respond to the requests from the client side to return all treats, add new treats, delete treats, and edit treat descriptions. 
 
 You will need:
 
@@ -78,9 +78,9 @@ And the new info should be in your table:
 ![dbUpdated](images/dbUpdated.png)
 
 
-- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle in the interface will display the delete button for each treat.
+- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
 
-- [ ] `PUT /treats/<id>` updates the treat description.
+- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
 
 ---
 
@@ -88,7 +88,7 @@ And the new info should be in your table:
 
 **If you're feeling fancy and have some time to spare**, try this one. You might need to research query strings and express. 
 
-- [ ] `GET /treats?q=donut` should return only treats that match the query parameter
+- [ ] `GET /treats?q=donut` should return only treats that match the query parameter.
 
 ---
 
