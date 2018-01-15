@@ -63,7 +63,9 @@ You will need:
 
 - [ ] `GET /treats` should return all treats from the database.
 
-- [ ] `POST /treats` expects a treat name, description and link to a url image.
+- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
+
+- [ ] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
 
 Once working you should be able to enter new treat info as such:
 
@@ -78,13 +80,17 @@ And the new info should be in your table:
 ![dbUpdated](images/dbUpdated.png)
 
 
-- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
 
-- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
+
+
 
 ---
 
-### Pro Mode
+### HARD Mode
+
+- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
+
+### PRO Mode
 
 **If you're feeling fancy and have some time to spare**, try this one. You might need to research query strings and express. 
 
