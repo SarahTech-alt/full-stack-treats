@@ -1,4 +1,4 @@
-DROP TABLE treats;
+-- DROP TABLE treats;
 
 CREATE TABLE treats (
 	id SERIAL PRIMARY KEY,
