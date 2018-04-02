@@ -1,4 +1,4 @@
-Code Challenge 3: Treats Server-side Code
+Code Challenge 4: Treats Server-side Code
 ===
 
 Your front-end developer has created all of the client-side code necessary to view, add, update, and delete treats from the database. 
@@ -90,7 +90,7 @@ And the new info should be in your table:
 
 - [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
 
-### PRO Mode
+### Stretch Goal
 
 **If you're feeling fancy and have some time to spare**, try this one. You might need to research query strings and express. 
 
