@@ -1,4 +1,4 @@
-Code Challenge 4: Treats Server-side Code
+Code Challenge 3: Treats Server-side Code
 ===
 
 Your front-end developer has created all of the client-side code necessary to view, add, update, and delete treats from the database. 
