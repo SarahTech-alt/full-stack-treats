@@ -67,6 +67,9 @@ You will need:
 
 - [ ] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
 
+- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
+
+
 Once working you should be able to enter new treat info as such:
 
 ![adding](images/adding.png)
@@ -86,9 +89,6 @@ And the new info should be in your table:
 
 ---
 
-### HARD Mode
-
-- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
 
 ### Stretch Goal
 
