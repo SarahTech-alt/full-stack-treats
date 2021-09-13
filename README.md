@@ -59,7 +59,7 @@ It seems to be missing the data you just added to your database.
 - [x] Create GET route to return treats from database
 - [x] Create DELETE route `/treats/<id>` to delete a specific treat based on 'id'
 - [x] Create a POST route  `/treats`that takes in treat name, description, image url
-- [ ] Create a put route `PUT /treats/<id>` that updates the treat description
+- [x] Create a put route `PUT /treats/<id>` that updates the treat description
 
 
 ### Base Mode
@@ -74,7 +74,7 @@ You will need:
 
 - [x] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
 
-- [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
+- [x] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
 
 
 Once working you should be able to enter new treat info as such:

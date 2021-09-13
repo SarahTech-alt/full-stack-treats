@@ -6,7 +6,6 @@ const pool = require('../modules/pool');
 
 router.get('/', (req, res) => {
     console.log(req.body);
-
     // text to send to database
     const queryText = `SELECT * FROM "treats" LIMIT 100;`
     // input the query text into the database and send 
@@ -48,6 +47,26 @@ router.post('/', (req, res) => {
 
 // PUT /treats/<id>
 
+router.put('/:id', (req, res) => {
+    console.log('in router put', req.body);
+    // create variables from user input for readability
+    const treatDescription = req.body.description;
+    const treatId = req.params.id;
+    // text to send to database with sanitized data
+    const queryText =
+        `UPDATE "treats"
+        SET "description" = $1
+        WHERE "id" = $2; `
+    // send query to database
+    // return status code 200 for success and 500 for error
+    pool.query(queryText, [treatDescription, treatId]
+    ).then(result => {
+        res.sendStatus(200);
+    }).catch(error => {
+        res.sendStatus(500);
+    })
+})
+
 
 // DELETE /treats/<id>
 // Navigate to the item with specific 'id'
@@ -69,5 +88,7 @@ router.delete('/:id', (req, res) => {
         res.sendStatus(500);
     })
 })
+
+
 
 module.exports = router;
