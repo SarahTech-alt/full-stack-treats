@@ -24,5 +24,23 @@ router.get('/', (req,res) => {
 // PUT /treats/<id>
 
 // DELETE /treats/<id>
+// Navigate to the item with specific 'id'
+router.delete('/:id', (req,res) => {
+    // Checking inputs from the client
+    console.log(req.body);
+    console.log(req.params);
+    // get id parameter and set to itemId
+    const itemId = req.params.id;
+    // write text to send to database
+    const queryText = `DELETE FROM "treats" 
+                        WHERE "id" = $1;`
+    // send query to database with requested id
+    // send back to client with status of success or error
+    pool.query(queryText, [itemId]).then(result => {
+        res.sendStatus(200);
+    }).catch(error => {
+        res.sendStatus(500);
+    })
+})
 
 module.exports = router;
