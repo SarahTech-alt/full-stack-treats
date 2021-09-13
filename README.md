@@ -53,7 +53,7 @@ It seems to be missing the data you just added to your database.
 
 ## TODO
 
-- [ ] npm install to get dependencies
+- [x] npm install to get dependencies
 - [ ] Create database `sql_code_challenge` and add info from 'treats.sql'
 - [ ] Create GET route to return treats from database
 - [ ] Create DELETE route `/treats/<id>` to delete a specific treat based on 'id'
