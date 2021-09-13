@@ -4,9 +4,9 @@ const pool = require('../modules/pool');
 
 // GET /treats
 
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
     console.log(req.body);
-    
+
     // text to send to database
     const queryText = `SELECT * FROM "treats" LIMIT 100;`
     // input the query text into the database and send 
@@ -21,11 +21,38 @@ router.get('/', (req,res) => {
 
 // POST /treats
 
+// POST from client to table "treats"
+
+router.post('/', (req, res) => {
+    console.log('in router post', req.body);
+    // create variables from user input for readability
+    const treatName = req.body.name;
+    const treatDescription = req.body.description;
+    const treatPic = req.body.pic;
+    // text to send to database with sanitized data
+    const queryText =
+        `INSERT INTO "treats" ("name", "description", "pic")
+        VALUES ($1,$2,$3)`;
+    // send query to database
+    // return status code 200 for success and 500 for error
+    pool.query(queryText,
+            [treatName, // $1 
+            treatDescription, //$2 
+            treatPic] // $3
+    ).then(result => {
+        res.sendStatus(200);
+    }).catch(error => {
+        res.sendStatus(500);
+    })
+})
+
 // PUT /treats/<id>
+
 
 // DELETE /treats/<id>
 // Navigate to the item with specific 'id'
-router.delete('/:id', (req,res) => {
+
+router.delete('/:id', (req, res) => {
     // Checking inputs from the client
     console.log(req.body);
     console.log(req.params);

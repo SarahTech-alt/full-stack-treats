@@ -58,7 +58,7 @@ It seems to be missing the data you just added to your database.
 - [x] Set up pool
 - [x] Create GET route to return treats from database
 - [x] Create DELETE route `/treats/<id>` to delete a specific treat based on 'id'
-- [ ] Create a POST route  `/treats`that takes in treat name, description, image url
+- [x] Create a POST route  `/treats`that takes in treat name, description, image url
 - [ ] Create a put route `PUT /treats/<id>` that updates the treat description
 
 
@@ -68,11 +68,11 @@ Create the routes and SQL queries necessary to respond to the requests from the 
 
 You will need:
 
-- [ ] `GET /treats` should return all treats from the database.
+- [x] `GET /treats` should return all treats from the database.
 
-- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
+- [x] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
 
-- [ ] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
+- [x] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
 
 - [ ] `PUT /treats/<id>` updates the treat description (the edit button is also displayed with the Mode Toggle button).
 
