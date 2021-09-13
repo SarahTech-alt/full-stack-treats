@@ -54,7 +54,7 @@ It seems to be missing the data you just added to your database.
 ## TODO
 
 - [x] npm install to get dependencies
-- [ ] Create database `sql_code_challenge` and add info from 'treats.sql'
+- [x] Create database `sql_code_challenge` and add info from 'treats.sql'
 - [ ] Create GET route to return treats from database
 - [ ] Create DELETE route `/treats/<id>` to delete a specific treat based on 'id'
 - [ ] Create a POST route  `/treats`that takes in treat name, description, image url
